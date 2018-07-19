@@ -1,4 +1,4 @@
-[preliminary wireframe](./gyffy-wireframe.002.png)
+[preliminary wireframe](/gyffy-wireframe.002.png)
 
 # gyffy
 ​
