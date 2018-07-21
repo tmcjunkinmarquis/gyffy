@@ -1,4 +1,4 @@
-export const locationSearch = (location)=>({
-  type: 'LOCATION_SEARCH',
+export const inputLocation = (location)=>({
+  type: 'INPUT_LOCATION',
   location
 });
