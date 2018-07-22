@@ -67,8 +67,6 @@ describe('', ()=>{
 
   describe('mapDispatchToProps', ()=>{
     let mockDispatch;
-    let wrapper;
-    let mockEvent;
     
     beforeEach(()=>{
       mockDispatch = jest.fn();
