@@ -4,7 +4,7 @@ import './SearchForm.css';
 import { inputLocation } from '../../Actions/Actions';
 import PropTypes from 'prop-types';
 
-class SearchForm extends Component{
+export class SearchForm extends Component{
   constructor(props) {
     super(props);
     this.state = {
@@ -23,7 +23,6 @@ class SearchForm extends Component{
   }
 
   handleSubmitForm = (event) => {
-    
     event.preventDefault();
     this.props.handleSubmit(this.state.value);
     // this.resetForm();
@@ -34,9 +33,9 @@ class SearchForm extends Component{
   render() {
     return (
       <form 
-        className = "form"
         action="" 
         onSubmit={this.handleSubmitForm}
+        className= "search-form"
       >
         <input 
           type="text"
@@ -54,7 +53,7 @@ export const mapStateToProps = (state)=>({
   location: state.location
 });
 
-const mapDispatchToProps = (dispatch) => ({
+export const mapDispatchToProps = (dispatch) => ({
   handleSubmit: (location) => dispatch(inputLocation(location))
 });
 
@@ -64,6 +63,5 @@ export default connect(
 
 SearchForm.propTypes ={
   handleSubmit: PropTypes.func
-  // location: PropTypes.string
 };
 
