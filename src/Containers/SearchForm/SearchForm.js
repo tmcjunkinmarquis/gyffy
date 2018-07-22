@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './SearchForm.css';
-import { inputLocation } from '../../Actions/Actions';
+import { inputLocation, loadStations } from '../../Actions/Actions';
 import PropTypes from 'prop-types';
+import { locationFetch } from '../../apiCalls/apiCalls';
 
 export class SearchForm extends Component{
   constructor(props) {
@@ -22,14 +23,18 @@ export class SearchForm extends Component{
     this.setState({ value: '' });
   }
 
+  makeStationFetch = ()=>{
+    const stations = locationFetch(this.props.location);
+    this.props.loadStoreWithStations(stations)
+  }
+
   handleSubmitForm = (event) => {
     event.preventDefault();
     this.props.handleSubmit(this.state.value);
-    // this.resetForm();
+    this.resetForm();
+    this.makeStationFetch();
   }
 
-  //for the form: 
-  
   render() {
     return (
       <form 
@@ -54,7 +59,8 @@ export const mapStateToProps = (state)=>({
 });
 
 export const mapDispatchToProps = (dispatch) => ({
-  handleSubmit: (location) => dispatch(inputLocation(location))
+  handleSubmit: (location) => dispatch(inputLocation(location)),
+  loadStoreWithStations: (stations)=> dispatch(loadStations(stations))
 });
 
 export default connect(
@@ -62,6 +68,7 @@ export default connect(
 )(SearchForm);
 
 SearchForm.propTypes ={
-  handleSubmit: PropTypes.func
+  handleSubmit: PropTypes.func,
+  location: PropTypes.string,
+  loadStoreWithStations: PropTypes.func
 };
-

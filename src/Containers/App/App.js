@@ -3,7 +3,13 @@ import SearchForm from '../SearchForm/SearchForm';
 
 import './App.css';
 
+// <FilterModalMenu />
 class App extends Component {
+
+
+
+
+
   render() {
     return (
       <div className="App">
@@ -11,6 +17,8 @@ class App extends Component {
           
           <h1 className="gyffy">gyffy</h1>
           <SearchForm />
+          
+          
         </header>
       </div>
     );
