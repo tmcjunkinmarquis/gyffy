@@ -1,9 +1,9 @@
 import {sampleStationDataFromZip} from './sampleStationDataFromZip';
 
-
 export const cleanerForStationsByZip = (stations) => {
+  // console.log(stations.fuel_stations);
   
-  return stations.reduce((acc, station) => {
+  return stations.fuel_stations.reduce((acc, station) => {
     const newStation = {
       name: station.station_name,
       city: station.city,

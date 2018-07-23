@@ -4,7 +4,8 @@ import './SearchForm.css';
 import { inputLocation, loadStations } from '../../Actions/Actions';
 import PropTypes from 'prop-types';
 import { locationFetch } from '../../apiCalls/apiCalls';
-import { cleanerForStationsByZip } from '../../SampleDataAndCleaner/cleanerForStationsByZip';
+import { cleanerForStationsByZip } 
+  from '../../SampleDataAndCleaner/cleanerForStationsByZip';
 
 export class SearchForm extends Component{
   constructor(props) {
@@ -27,8 +28,7 @@ export class SearchForm extends Component{
   makeStationFetch = async ()=>{
     const unrefinedStationData = await locationFetch(this.state.value);
     const refinedStationData = cleanerForStationsByZip(unrefinedStationData);
-    const refinedStations = refinedStationData.fuel_stations;
-    this.props.loadStoreWithStations(refinedStations); 
+    this.props.loadStoreWithStations(refinedStationData); 
   }
 
   handleSubmitForm = (event) => {
