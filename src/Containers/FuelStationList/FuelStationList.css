@@ -1,4 +1,20 @@
-h3  {
+.wrapper {
+  background-color: #E8EEF1;
+  background-color: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  text-shadow: none;
+  color: gray;
+}
+
+.fuel-station-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.fuel-stations-header {
+  margin-left: 20px;
   color: black;
   text-shadow: none;
 }
