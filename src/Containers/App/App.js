@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import SearchForm from '../SearchForm/SearchForm';
 import './App.css';
 import FuelStationList from '../FuelStationList/FuelStationList';
+import FilterMenu from '../../Components/FilterMenu/FilterMenu';
 
 // <FilterModalMenu />
 class App extends Component {
@@ -13,7 +14,7 @@ class App extends Component {
           
           <h1 className="gyffy">gyffy</h1>
           <SearchForm />
-          
+          <FilterMenu />
           <FuelStationList />
         </header>
       </div>

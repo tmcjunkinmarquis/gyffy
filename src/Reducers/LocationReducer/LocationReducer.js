@@ -1,4 +1,4 @@
-
+const initialState = 'SHOW'
 
 const LocationReducer = (state = '', action) => {
   switch (action.type) {
