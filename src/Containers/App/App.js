@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
 import SearchForm from '../SearchForm/SearchForm';
-
 import './App.css';
+import FuelStationList from '../FuelStationList/FuelStationList';
 
 // <FilterModalMenu />
 class App extends Component {
-
-
-
-
 
   render() {
     return (
@@ -18,7 +14,7 @@ class App extends Component {
           <h1 className="gyffy">gyffy</h1>
           <SearchForm />
           
-          
+          <FuelStationList />
         </header>
       </div>
     );
