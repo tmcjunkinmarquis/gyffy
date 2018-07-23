@@ -1,0 +1,18 @@
+.fuel-station {
+  text-align: center;
+  height: 200px;
+  width: 150px;
+  box-shadow: 1px 1px 3px #6A9ECF;
+  background-color:white;
+  margin: 10px;
+};
+
+.fuel-station .name {
+  text-shadow: none;
+  color: black;
+}
+
+.address {
+  text-shadow: none;
+  color: darkslateblue;
+}
