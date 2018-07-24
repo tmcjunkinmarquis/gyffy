@@ -27,8 +27,6 @@ export class SearchForm extends Component{
 
   makeStationFetch = async ()=>{
     const unrefinedStationData = await locationFetch(this.state.value);
-    console.log(unrefinedStationData);
-    
     const refinedStationData = cleanerForStationsByZip(unrefinedStationData);
     this.props.loadStoreWithStations(refinedStationData); 
   }
