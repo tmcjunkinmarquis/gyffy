@@ -7,7 +7,7 @@ const FilterMenu = (props)=>{
     <section className="FilterMenu">
       <Filter  filter="SHOW_ALL">All Stations</Filter>
       <Filter  filter="SHOW_ELEC">Electric Stations</Filter>
-      <Filter  filter="SHOW_CNG">CNG Stations</Filter>
+      <Filter  filter="SHOW_LPG">LPG Stations</Filter>
     </section>
   );
 };

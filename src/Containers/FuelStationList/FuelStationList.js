@@ -27,6 +27,20 @@ const FuelStationLIst = (props) => {
     });  
   };
 
+  const filterToReturnLpgStations = ()=>{
+    const filteredStations = props.stations.filter((station)=>{
+      return station.fuelType === 'LPG';
+    });
+
+    return filteredStations.map((station)=>{
+      return <StationCard
+        station={station}
+        key={station.id}
+        fuelType={station.fuelType} />;
+    });
+  };
+
+
 
   return(
     <div className="wrapper">
@@ -43,6 +57,12 @@ const FuelStationLIst = (props) => {
       {props.filter === 'SHOW_ELEC' ?
         <div className="fuel-station-list">
           {filterToReturnElecStations()}
+        </div> :
+        ''
+      }
+      {props.filter === 'SHOW_LPG' ?
+        <div className="fuel-station-list">
+          {filterToReturnLpgStations()}
         </div> :
         ''
       }
