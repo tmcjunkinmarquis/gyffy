@@ -3,13 +3,19 @@ import './StationCard.css';
 import PropTypes from 'prop-types';
 
 const Station = ({ station })=>{
-  const { name, address, fuelType } = station;
+  const { name, address, fuelType, connectorTypes } = station;
+
+  const showConnectortype = ()=>{
+    return connectorTypes.map((type)=>{
+      return <span className="connector-type">{`connector:  ${type}`}</span>
+    })
+  }
 
   return <div className="fuel-station">
-    <h3 className="name">{name}</h3>
-    <h3 className="address">{address}</h3>
-    <h5 className="fuel-type">{fuelType}</h5>
-    {fuelType === 'ELEC'? <span>connector type</span> : ''}
+    <p className="name">{name}</p>
+    <p className="address">{address}</p>
+    <p className="fuel-type fuel-type">{fuelType}</p>
+    {fuelType === 'ELEC'? <span>{showConnectortype()}</span> : ''}
   </div>;
 };
 
