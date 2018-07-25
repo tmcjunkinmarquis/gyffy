@@ -23,11 +23,6 @@ When you have the dependencies loaded, from the terminal cd into the gyffy folde
 ```
 npm start
 ```
-
-## Running the tests
-​
-Explain how to run the automated tests for this system
-​
 ## Author
 ​
 * **Theresa Marquis** - *Initial work* - [Github](https://github.com/tmcjunkinmarquis)
