@@ -1,22 +1,16 @@
 import React, { Component } from 'react';
-import SearchForm from '../SearchForm/SearchForm';
 import './App.css';
-import FuelStationList from '../FuelStationList/FuelStationList';
 import FilterMenu from '../../Components/FilterMenu/FilterMenu';
+import CardContainer from '../CardContainer/CardContainer';
+import Header from '../../Components/Header/Header';
 
-// <FilterModalMenu />
 class App extends Component {
-
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          
-          <h1 className="gyffy">gyffy</h1>
-          <SearchForm />
-          <FilterMenu />
-          <FuelStationList />
-        </header>
+        <Header className="App-header" />        
+        <FilterMenu />
+        <CardContainer /> 
       </div>
     );
   }

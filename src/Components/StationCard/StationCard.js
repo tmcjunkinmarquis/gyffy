@@ -7,7 +7,9 @@ const Station = ({ station })=>{
 
   const showConnectortype = ()=>{
     return connectorTypes.map((type)=>{
-      return <span className="connector-type">{`connector:  ${type}`}</span>
+      return <span 
+        className="connector-type"
+        key={type}><p>connector: </p>{` ${type}`}</span>
     })
   }
 

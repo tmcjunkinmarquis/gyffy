@@ -1,7 +1,15 @@
-.FilterMenu {
+.filter-menu {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  grid-template-rows: 50% 50%;
+}
+
+.nav {
   display: flex;
   flex-direction: column;
-  height: 75px;
+  height: 7px;
   background-color: #E8EEF1;
-  padding: 20px;
+  padding: 20px 10px 20px 30px;
+  text-shadow: none;
+  text-decoration: none;
 }

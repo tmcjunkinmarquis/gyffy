@@ -1,5 +1,3 @@
-import {sampleStationDataFromZip} from './sampleStationDataFromZip';
-
 export const cleanerForStationsByZip = (stations) => {
   // console.log(stations.fuel_stations);
   
