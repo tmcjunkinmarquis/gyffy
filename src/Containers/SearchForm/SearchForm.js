@@ -49,7 +49,7 @@ export class SearchForm extends Component{
         <input 
           type="text"
           value={this.state.value}
-          placeholder='Type location'
+          placeholder='Type zipcode'
           onChange = {this.handleChange}
         />
         <button>Submit</button>
