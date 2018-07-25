@@ -16,7 +16,7 @@ describe('locationFetch', () => {
   it('should call locationFetch with the correct parameters', async () => {
     const url = `https://developer.nrel.gov/api/alt-fuel-stations/v1/nearest.json?api_key=${apiKey}&location=${zipcode}`;
     await locationFetch(zipcode);
-    expect(window.locationFetch).toHaveBeenCalledWith(url);
+    expect(window.fetch).toHaveBeenCalledWith(url);
   });
 
   // below passes
@@ -29,9 +29,9 @@ describe('locationFetch', () => {
   // below fails
   it('should return an error if the fetch fails', async () => {
     window.fetch = jest.fn().mockImplementation(() => Promise.reject(Error('Fetch failed')));
-    const expected = 'Fetch failed';
-    const result = await locationFetch(zipcode);
-    expect(result).toEqual(expected);
+    const expected = Error('Fetch failed');
+    // const result = await locationFetch(zipcode);
+    await expect(locationFetch(zipcode)).rejects.toEqual(expected);
   });
 
 });

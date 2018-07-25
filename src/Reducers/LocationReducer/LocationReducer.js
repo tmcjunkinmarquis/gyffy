@@ -1,5 +1,3 @@
-
-
 const LocationReducer = (state = '', action) => {
   switch (action.type) {
     case 'INPUT_LOCATION':
