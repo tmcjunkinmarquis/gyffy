@@ -2,7 +2,7 @@
 
 # gyffy
 ​
-One Paragraph of project description goes here
+The project allows a user to enter a zipcode and see alternative fuel stations in a **gyffy**.  Users can choose to filter the cards by LPG Stations, Electric Fuel Stations, or All Stations
 ​
 ## Getting Started
 ​
