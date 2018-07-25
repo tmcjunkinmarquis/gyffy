@@ -11,4 +11,9 @@ export const loadStations = (stations)=>({
 export const setFilter = (filter) =>({
   type: 'SET_FILTER',
   filter
-})
+});
+
+export const setId = (id) =>({
+  type: 'SET_ID',
+  id
+});
