@@ -1,8 +1,10 @@
 import React from 'react';
-import { Switch, Route} from 'react-router-dom';
+import { Switch, Route, withRouter } from 'react-router-dom';
 import FuelStationList from '../FuelStationList/FuelStationList';
 import ElectricStationList from '../ElectricStationList/ElectricStationsList';
 import LpgStationList from '../LpgStationList/LpgStationList';
+import DetailsCard from '../DetailsCard/DetailsCard';
+import { connect } from 'react-redux';
 
 const CardContainer = (props)=>{
   return (
@@ -19,8 +21,27 @@ const CardContainer = (props)=>{
         exact path="/lpg"
         component={LpgStationList}
       />
+      <Route
+        path="/details/:id"
+        render={({match})=>{
+          const foundStation = props.stations.find((station)=>{
+            
+            
+            console.log(station.id === Number(match.params.id));
+            
+            return station.id === Number(match.params.id);
+          });
+          return (
+            <DetailsCard foundStation={foundStation} />
+          );
+        }}
+      />
     </Switch> 
-  )
-}
+  );
+};
 
-export default CardContainer;
+export const mapStateToProps = (state)=>({
+  stations: state.stations
+});
+
+export default withRouter(connect(mapStateToProps)(CardContainer));
