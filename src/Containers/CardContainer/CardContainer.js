@@ -25,10 +25,6 @@ const CardContainer = (props)=>{
         path="/details/:id"
         render={({match})=>{
           const foundStation = props.stations.find((station)=>{
-            
-            
-            console.log(station.id === Number(match.params.id));
-            
             return station.id === Number(match.params.id);
           });
           return (

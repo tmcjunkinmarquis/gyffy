@@ -4,6 +4,7 @@ import './ElectricStationList.css';
 import StationCard from '../../Components/StationCard/StationCard';
 import PropTypes from 'prop-types';
 import { setFilter } from '../../Actions/Actions';
+import { Link } from 'react-router-dom';
 
 class ElectricStationList extends Component {
   
@@ -17,10 +18,14 @@ class ElectricStationList extends Component {
       return station.fuelType === 'ELEC';
     });
     return filteredStations.map((station) => {
-      return <StationCard
-        station={station}
-        key={station.id}
-        fuelType={station.fuelType} />;
+      return <Link
+        to={`/details/${station.id}`}
+        key={station.id}>
+        <StationCard
+          station={station}
+
+          fuelType={station.fuelType} />
+      </Link>;
     });
   };
 

@@ -28,16 +28,15 @@ class Station extends Component {
 
   render() { 
     return (
-      
-        <div
-          onClick={this.handleClick}
-          className="fuel-station">
-          <p className="name">{this.props.station.name}</p>
-          <p className="address">{this.props.station.address}</p>
-          <p className="fuel-type fuel-type">{this.props.station.fuelType}</p>
-          {this.props.station.fuelType === 'ELEC' ? <span><p>connectors: </p>{this.showConnectortype()}</span> : ''}
+      <div
+        onClick={this.handleClick}
+        className="fuel-station">
+        <p className="name">{this.props.station.name}</p>
+        <p className="address">{this.props.station.address}</p>
+        <p className="fuel-type fuel-type">{this.props.station.fuelType}</p>
+        {this.props.station.fuelType === 'ELEC' ? <span><p>connectors: </p>{this.showConnectortype()}</span> : ''}
           
-        </div>
+      </div>
      
     );
   } 
