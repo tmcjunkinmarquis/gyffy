@@ -1,7 +1,7 @@
 const SelectedStationReducer = (state = {}, action) => {
   switch (action.type) {
     case 'SET_SELECTED_STATION':
-      return action.setSelectedStation;
+      return action.station;
     default:
       return state;
   }

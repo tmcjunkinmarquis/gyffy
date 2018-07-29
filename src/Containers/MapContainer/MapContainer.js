@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 // import { Marker } from '../../Components/Marker/Marker';
 
+
 export class MapContainer extends Component {
   constructor(props){
     super(props);
@@ -19,7 +20,7 @@ export class MapContainer extends Component {
 
   handleMarkerClick = (props, marker, event) =>{
     this.setState({
-      selectedStation: props,
+      selectedStation: props, //grab fromn store 
       activeMarker: marker,
       showingInfoWindow: true
     });
@@ -39,11 +40,17 @@ export class MapContainer extends Component {
       google={this.props.google}
       stationName={this.props.selectedStation.name}
       onClick={this.handleMarkerClick}
-      postion={{ lat: this.props.selectedStation.latitude, lng: this.props.selectedStation.lng }}
+      postion={{ lat: this.props.selectedStation.latitude, lng: this.props.selectedStation.longitude }}
       key={this.props.selectedStation.id} />;
   }
   
-  
+  componentDidMount() {
+    console.log('station info: ', this.props.selectedStation)
+    this.setState({position: {
+      lat: 39.7512822,
+      lng: -104.9944365
+    }})
+  }
   
   render() {
     const style = {
@@ -53,29 +60,35 @@ export class MapContainer extends Component {
 
     // San Francisco, by default
     const initialCenter = {
-      lat: 37.774929,
-      lng: -122.419416
+      lat: 38.902775,
+      lng: -77.455649
     };
-    
+    const center = {
+        lat: this.props.selectedStation.latitude,
+          lng: this.props.selectedStation.longitude
+      }
+
+
+
     return (
       < Map
         google={this.props.google}
         style={style}
         initialCenter={initialCenter}
-        center = {{
-          lat: this.state.selectedStation.latitude,
-          lng: this.state.selectedStation.longitude
-        }}
-        zoom={4}
+        center = {center}
+        zoom={12}
         onClick={this.handleMapClick}
       >
         {this.selectedStationMarker}
+        {/* <Map google={this.props.google} zoom={5} initialCenter={initialCenter}> */}
         <InfoWindow
           marker={this.state.activeMarker}
           visible={this.state.showingInfoWidow}
         >
           <div>
-            <h3>{this.state.selectedStation}</h3>
+            <h3>{this.state.selectedStation.name}</h3>
+            {console.log('station: ', this.state.selectedStation)}
+            <h3>HELLO</h3>
          
           </div> 
         </InfoWindow>

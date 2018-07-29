@@ -1,20 +1,24 @@
 import React, { Component } from 'react';
 import './StationCard.css';
 import PropTypes from 'prop-types';
-import DetailsCard from '../../Containers/DetailsCard/DetailsCard';
-import { Switch, Route, Link } from 'react-router-dom';
-import { setId } from '../../Actions/Actions';
+// import DetailsCard from '../../Containers/DetailsCard/DetailsCard';
+// import { Switch, Route, Link } from 'react-router-dom';
+import { setId, setSelectedStation } from '../../Actions/Actions';
+
 import { connect } from 'react-redux';
 
 
 class Station extends Component {
-  constructor(props){
-    super(props);
-  }
+  // constructor(props){
+  //   super(props);
+  // }
 
   
   handleClick = ()=>{
-    this.props.setId(this.props.station.id)
+    this.props.setId(this.props.station.id);
+    // console.log(this.props.station);
+    
+    this.props.setSelectedStation(this.props.station);
   }
   
   showConnectortype = ()=>{
@@ -43,7 +47,8 @@ class Station extends Component {
 };
 
 export const mapDispatchToProps = (dispatch)=>({
-  setId: (id)=>dispatch(setId(id))
+  setId: (id)=>dispatch(setId(id)),
+  setSelectedStation: (station) => dispatch(setSelectedStation(station))
 });
 
 export default connect(null, mapDispatchToProps)(Station);

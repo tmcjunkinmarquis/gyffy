@@ -1,6 +1,6 @@
 import React from 'react';
 import './DetailsCard.css';
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 import MapContainer from '../MapContainer/MapContainer';
 
 const DetailsCard = (props)=>{ 
@@ -8,6 +8,7 @@ const DetailsCard = (props)=>{
     <div>
       <h2>I am a details card</h2>
       <MapContainer />
+      <h3>STUFF container</h3>
     </div>
   );
 };
