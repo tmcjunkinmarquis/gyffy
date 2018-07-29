@@ -17,3 +17,8 @@ export const setId = (id) =>({
   type: 'SET_ID',
   id
 });
+
+export const setSelectedStation = (station) => ({
+  type: 'SET_SELECTED_STATION',
+  station
+});
