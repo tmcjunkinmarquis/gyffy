@@ -5,6 +5,7 @@ import StationCard from '../../Components/StationCard/StationCard';
 import PropTypes from 'prop-types';
 import { setFilter } from '../../Actions/Actions';
 import { Link } from 'react-router-dom';
+import DetailsCard from '../DetailsCard/DetailsCard';
 
 class ElectricStationList extends Component {
   
@@ -12,7 +13,6 @@ class ElectricStationList extends Component {
     this.props.handleFilterClick('SHOW_ELEC');
   }
 
-  
   filterToReturnElecStations = () => {
     const filteredStations = this.props.stations.filter((station) => {
       return station.fuelType === 'ELEC';
@@ -23,7 +23,7 @@ class ElectricStationList extends Component {
         key={station.id}>
         <StationCard
           station={station}
-
+          className= "details-card"
           fuelType={station.fuelType} />
       </Link>;
     });

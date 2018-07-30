@@ -35,8 +35,7 @@ export class SearchForm extends Component{
     event.preventDefault();
     this.props.handleSubmit(this.state.value);
     this.resetForm();
-    this.makeStationFetch();
-    
+    this.makeStationFetch(); 
   }
 
   render() {

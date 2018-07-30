@@ -35,27 +35,33 @@ export class MapContainer extends Component {
     }
   }
 
+  
+
   selectedStationMarker = ()=>{
+    // return <Marker
+    //   stationName={this.props.selectedStation.name}
+    //   onClick={this.handleMarkerClick}
+    //   postion={{ lat: 37.759703, lng: -122.428093 }}
+    //   key={this.props.selectedStation.id} />;
     return <Marker
-      google={this.props.google}
-      stationName={this.props.selectedStation.name}
-      onClick={this.handleMarkerClick}
-      postion={{ lat: this.props.selectedStation.latitude, lng: this.props.selectedStation.longitude }}
-      key={this.props.selectedStation.id} />;
+      name={this.props.selectedStation.name}
+      position={{ lat: this.props.selectedStation.latitude, lng: this.props.selectedStation.longitude }} />
   }
   
   componentDidMount() {
-    console.log('station info: ', this.props.selectedStation)
+    console.log('station info: ', this.props.selectedStation);
     this.setState({position: {
       lat: 39.7512822,
       lng: -104.9944365
-    }})
+    }});
   }
   
   render() {
     const style = {
+      margin: 'auto',
       width: '90vw',
-      height: '50vh'
+      height: '50vh',
+      position: 'relative'
     };
 
     // San Francisco, by default
@@ -64,11 +70,9 @@ export class MapContainer extends Component {
       lng: -77.455649
     };
     const center = {
-        lat: this.props.selectedStation.latitude,
-          lng: this.props.selectedStation.longitude
-      }
-
-
+      lat: this.props.selectedStation.latitude,
+      lng: this.props.selectedStation.longitude
+    };
 
     return (
       < Map
@@ -76,11 +80,10 @@ export class MapContainer extends Component {
         style={style}
         initialCenter={initialCenter}
         center = {center}
-        zoom={12}
+        zoom={15}
         onClick={this.handleMapClick}
       >
-        {this.selectedStationMarker}
-        {/* <Map google={this.props.google} zoom={5} initialCenter={initialCenter}> */}
+        {this.selectedStationMarker()}
         <InfoWindow
           marker={this.state.activeMarker}
           visible={this.state.showingInfoWidow}
