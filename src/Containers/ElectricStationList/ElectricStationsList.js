@@ -7,7 +7,7 @@ import { setFilter } from '../../Actions/Actions';
 import { Link } from 'react-router-dom';
 import DetailsCard from '../DetailsCard/DetailsCard';
 
-class ElectricStationList extends Component {
+export class ElectricStationList extends Component {
   
   componentDidMount(){ 
     this.props.handleFilterClick('SHOW_ELEC');
