@@ -4,7 +4,7 @@ import './FilterMenu.css';
 import { Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-const FilterMenu = (props)=>{
+export const FilterMenu = (props)=>{
 
   const provideLinks = ()=>{
     return <div className="filter-menu">
@@ -29,5 +29,5 @@ export const mapStateToProps = (state) => ({
 export default withRouter(connect(mapStateToProps)(FilterMenu));
 
 FilterMenu.propTypes = {
-  location: PropTypes.num
-}
+  location: PropTypes.number
+};

@@ -1,9 +1,22 @@
+import React from 'react';
+import { shallow } from 'enzyme';
 import { FilterMenu, mapStateToProps } from './FilterMenu';
 
 describe('FilterMenu Container', () => {
+  let wrapper;
+
   describe('FilterMenu component', () => {
-    // Write these tests 
-    
+    beforeEach(()=>{
+      wrapper = shallow(<FilterMenu />);
+    });
+
+    it('should match the snapshot', () => {
+
+      it('should match the snapshot', () => {
+        // Expectation
+        expect(wrapper).toMatchSnapshot();
+      });
+    });   
   });
 
   describe('mapStateToProps', () => {
