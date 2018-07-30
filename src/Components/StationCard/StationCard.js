@@ -5,6 +5,9 @@ import { setId, setSelectedStation } from '../../Actions/Actions';
 import { connect } from 'react-redux';
 
 export class Station extends Component {
+  constructor(props){
+    super(props);
+  }
  
   handleClick = ()=>{
     this.props.setId(this.props.station.id);

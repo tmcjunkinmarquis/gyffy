@@ -7,7 +7,7 @@ import DetailsCard from '../DetailsCard/DetailsCard';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-const CardContainer = (props)=>{
+export const CardContainer = (props)=>{
   return (
     <Switch>
       <Route
@@ -43,6 +43,6 @@ export const mapStateToProps = (state)=>({
 
 export default withRouter(connect(mapStateToProps)(CardContainer));
 
-CardContainer.PropTypes = {
+CardContainer.propTypes = {
   stations: PropTypes.array
 };

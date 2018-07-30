@@ -21,8 +21,8 @@ ShallowWrapper {
         <Header
           className="App-header"
 />,
-        <withRouter(Connect(FilterMenu)) />,
-        <withRouter(Connect(CardContainer)) />,
+        <withRouter(Connect(Component)) />,
+        <withRouter(Connect(Component)) />,
       ],
       "className": "App",
     },
@@ -70,8 +70,8 @@ ShallowWrapper {
           <Header
             className="App-header"
 />,
-          <withRouter(Connect(FilterMenu)) />,
-          <withRouter(Connect(CardContainer)) />,
+          <withRouter(Connect(Component)) />,
+          <withRouter(Connect(Component)) />,
         ],
         "className": "App",
       },
