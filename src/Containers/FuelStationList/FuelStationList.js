@@ -7,7 +7,7 @@ import { setFilter } from '../../Actions/Actions';
 import { Link } from 'react-router-dom';
 
 
-class FuelStationList extends Component {
+export class FuelStationList extends Component {
   
   componentDidMount(){
     this.props.handleFilterClick('SHOW_ALL')

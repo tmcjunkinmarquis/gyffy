@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import { setFilter } from '../../Actions/Actions';
 import { Link } from 'react-router-dom';
 
-class LpgStationList extends Component {
+export class LpgStationList extends Component {
 
   componentDidMount() {
     this.props.handleFilterClick('SHOW_LPG');
