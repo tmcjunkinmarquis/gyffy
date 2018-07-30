@@ -23,20 +23,22 @@ class ElectricStationList extends Component {
         key={station.id}>
         <StationCard
           station={station}
-          className= "details-card"
+          className= "station-card"
           fuelType={station.fuelType} />
       </Link>;
     });
   };
 
   fillTheSpan = () => {
-    return 'ELEC   '
+    return 'ELEC   ';
   }
 
   render(){
-     return (
+    return (
       <div className="wrapper">
-        <h3 className="fuel-stations-header"><span className="filter-type">{this.fillTheSpan()}</span>STATIONS
+        <h3 className="fuel-stations-header">
+          <span className="filter-type">{this.fillTheSpan()}</span>
+          STATIONS
           <span >   -   {this.props.location}</span>
         </h3>
         <div className="fuel-station-list">{this.filterToReturnElecStations()}</div>

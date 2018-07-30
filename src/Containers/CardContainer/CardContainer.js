@@ -5,6 +5,7 @@ import ElectricStationList from '../ElectricStationList/ElectricStationsList';
 import LpgStationList from '../LpgStationList/LpgStationList';
 import DetailsCard from '../DetailsCard/DetailsCard';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 const CardContainer = (props)=>{
   return (
@@ -41,3 +42,7 @@ export const mapStateToProps = (state)=>({
 });
 
 export default withRouter(connect(mapStateToProps)(CardContainer));
+
+CardContainer.PropTypes = {
+  stations: PropTypes.array
+};

@@ -27,13 +27,15 @@ class FuelStationList extends Component {
   };
 
   fillTheSpan = () => {
-    return 'ALL  '
+    return 'ALL  ';
   }
 
   render(){
     return (
       <div className="wrapper">
-        <h3 className="fuel-stations-header"><span className="filter-type">{this.fillTheSpan()}</span>STATIONS
+        <h3 className="fuel-stations-header">
+          <span className="filter-type">{this.fillTheSpan()}</span>
+          STATIONS
           <span >   -   {this.props.location}</span>
         </h3>
         <div className="fuel-station-list">{this.makeAstation()}</div>
@@ -55,5 +57,7 @@ export const mapDispatchToProps = (dispatch) => ({
 export default connect(mapStateToProps, mapDispatchToProps)(FuelStationList);
 
 FuelStationList.propTypes = {
-  stations: PropTypes.array
+  stations: PropTypes.array,
+  location: PropTypes.string,
+  handleFilterClick: PropTypes.func
 };

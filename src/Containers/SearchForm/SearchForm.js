@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 import { locationFetch } from '../../apiCalls/apiCalls';
 import { cleanerForStationsByZip } 
   from '../../SampleDataAndCleaner/cleanerForStationsByZip';
-
 export class SearchForm extends Component{
   constructor(props) {
     super(props);

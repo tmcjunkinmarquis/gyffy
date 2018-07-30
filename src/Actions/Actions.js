@@ -22,3 +22,8 @@ export const setSelectedStation = (station) => ({
   type: 'SET_SELECTED_STATION',
   station
 });
+
+// export const setCenter = (center) = ({
+//   type: 'SET_CENTER',
+//   center
+// });

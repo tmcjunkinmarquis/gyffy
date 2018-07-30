@@ -12,7 +12,7 @@ const FilterMenu = (props)=>{
       <Link to="/electric" className="nav">Electric</Link>
       <Link to="/lpg" className="nav">LPG</Link> 
     </div>;
-};
+  };
 
   return (
     <section className="FilterMenu">

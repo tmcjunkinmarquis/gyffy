@@ -28,13 +28,15 @@ class LpgStationList extends Component {
   };
 
   fillTheSpan = ()=>{
-    return 'LPG   '
+    return 'LPG   ';
   }
 
   render() {
     return (
       <div className="wrapper">
-        <h3 className="fuel-stations-header"><span className="filter-type">{this.fillTheSpan()}</span>STATIONS
+        <h3 className="fuel-stations-header">
+          <span className="filter-type">{this.fillTheSpan()}</span>
+          STATIONS
           <span >   -   {this.props.location}</span>
         </h3> 
         <div className="fuel-station-list">

@@ -8,22 +8,15 @@
   padding: 5px;
 };
 
-.details-card {
-  border: 2px solid green;
-}
-
-
 .name {
   font-weight: 100;
   text-shadow: none;
-  color: darkslategray;
-  
+  color: darkslategray; 
 }
 
 .address {
   text-shadow: none;
-  color: darkslateblue;
-  
+  color: darkslateblue;  
 }
 
 .fuel-type {
@@ -33,5 +26,4 @@
 .connector-type {
   flex-direction: row;
   font-size: small;
-
 }
