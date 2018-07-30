@@ -1,5 +1,3 @@
-
-
 export const sampleStationDataFromZip = {
   "latitude": 40.775433,
   "longitude": -89.639114,

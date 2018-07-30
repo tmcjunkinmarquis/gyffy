@@ -4,6 +4,7 @@ import './LpgStationList.css';
 import StationCard from '../../Components/StationCard/StationCard';
 import PropTypes from 'prop-types';
 import { setFilter } from '../../Actions/Actions';
+import { Link } from 'react-router-dom';
 
 class LpgStationList extends Component {
 
@@ -16,21 +17,26 @@ class LpgStationList extends Component {
       return station.fuelType === 'LPG';
     });
     return filteredStations.map((station) => {
-      return <StationCard
-        station={station}
-        key={station.id}
-        fuelType={station.fuelType} />;
+      return <Link
+        to={`/details/${station.id}`}
+        key={station.id}>
+        <StationCard
+          station={station}
+          fuelType={station.fuelType} />
+      </Link>;
     });
   };
 
   fillTheSpan = ()=>{
-    return 'LPG   '
+    return 'LPG   ';
   }
 
   render() {
     return (
       <div className="wrapper">
-        <h3 className="fuel-stations-header"><span className="filter-type">{this.fillTheSpan()}</span>STATIONS
+        <h3 className="fuel-stations-header">
+          <span className="filter-type">{this.fillTheSpan()}</span>
+          STATIONS
           <span >   -   {this.props.location}</span>
         </h3> 
         <div className="fuel-station-list">

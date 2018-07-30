@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 import { locationFetch } from '../../apiCalls/apiCalls';
 import { cleanerForStationsByZip } 
   from '../../SampleDataAndCleaner/cleanerForStationsByZip';
-
 export class SearchForm extends Component{
   constructor(props) {
     super(props);
@@ -35,8 +34,7 @@ export class SearchForm extends Component{
     event.preventDefault();
     this.props.handleSubmit(this.state.value);
     this.resetForm();
-    this.makeStationFetch();
-    
+    this.makeStationFetch(); 
   }
 
   render() {
@@ -49,7 +47,7 @@ export class SearchForm extends Component{
         <input 
           type="text"
           value={this.state.value}
-          placeholder='Type location'
+          placeholder='Type zipcode'
           onChange = {this.handleChange}
         />
         <button>Submit</button>

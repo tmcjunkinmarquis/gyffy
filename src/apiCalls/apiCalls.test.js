@@ -1,8 +1,7 @@
-// import React from 'react';
+
 import { locationFetch } from './apiCalls';
 import { apiKey } from '../apiKey';
 import { sampleStationDataFromZip } from '../SampleDataAndCleaner/sampleStationDataFromZip';
-
 
 describe('locationFetch', () => {
   let zipcode;

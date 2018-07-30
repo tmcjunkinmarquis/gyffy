@@ -1,0 +1,87 @@
+import React, { Component } from 'react';
+import { aGoogleKey } from '../../apiKey';
+import { Map, Marker, GoogleApiWrapper } from 'google-maps-react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+// import { setCenter } from '../../Actions/Actions';
+
+export class MapContainer extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      position:{}
+    };
+  }
+
+  selectedStationMarker = ()=>{
+    return <Marker
+      name={this.props.selectedStation.name}
+      position={{
+        lat: this.props.selectedStation.latitude, 
+        lng: this.props.selectedStation.longitude 
+      }} />;
+  }
+  
+  componentDidMount() {
+    this.setState({position: {
+      lat: 39.7512822,
+      lng: -104.9944365
+    }});
+    const lat = this.props.selectedStation.latitude;
+    const lng = this.props.selectedStation.longitude;
+    // this.props.setCenter({
+    //   lat,
+    //   lng 
+    // });
+  }
+  
+  render() {
+    const style = {
+      margin: 'auto',
+      width: '90vw',
+      height: '50vh',
+      position: 'relative'
+    };
+    const initialCenter = {
+      lat: 38.902775,
+      lng: -77.455649
+    };
+    const center = {
+      lat: this.props.selectedStation.latitude,
+      lng: this.props.selectedStation.longitude
+    };
+
+    return (
+      < Map
+        google={this.props.google}
+        style={style}
+        initialCenter={initialCenter}
+        center = {center}
+        zoom={15}
+      >
+        {this.selectedStationMarker()}   
+      </Map>
+    );
+  }
+}
+
+export const mapStateToProps = (state) => ({
+  selectedStation: state.selectedStation
+});
+
+export const mapDispatchToProps = (dispatch) =>({
+  /* setCenter: (center) => dispatch(setCenter(center)) */
+});
+
+const googleWrapper = GoogleApiWrapper({
+  apiKey: aGoogleKey
+})(MapContainer);
+
+export default connect(mapStateToProps, mapDispatchToProps)(googleWrapper);
+
+MapContainer.propTypes = {
+  google: PropTypes.object,
+  loaded: PropTypes.bool,
+  selectedStation: PropTypes.object,
+  setCenter: PropTypes.object
+};  
