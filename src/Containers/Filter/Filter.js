@@ -1,9 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { setFilter } from '../../Actions/Actions';
-import './Filter.css'
+import './Filter.css';
+import PropTypes from 'prop-types';
 
-const Filter = ({ handleFilterClick, filter, children })=>{
+
+export const Filter = ({ handleFilterClick, filter, children })=>{
   
   return (
 

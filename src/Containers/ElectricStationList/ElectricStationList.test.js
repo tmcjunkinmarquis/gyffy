@@ -44,7 +44,7 @@ describe('ElectricStationList Container', () => {
         />);
     });
 
-    it.only('should return an object with keys location, stations, and filter', () => {
+    it('should return an object with keys location, stations, and filter', () => {
       const mockState = {
         location: '61615',
         stations: [{name: 'bubbas'}],
