@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import './FilterMenu.css';
 import { Link, withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const FilterMenu = (props)=>{
 
@@ -26,3 +27,7 @@ export const mapStateToProps = (state) => ({
 });
 
 export default withRouter(connect(mapStateToProps)(FilterMenu));
+
+FilterMenu.propTypes = {
+  location: PropTypes.num
+}
