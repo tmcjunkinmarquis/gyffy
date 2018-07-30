@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { setId, setSelectedStation } from '../../Actions/Actions';
 import { connect } from 'react-redux';
 
-class Station extends Component {
+export class Station extends Component {
  
   handleClick = ()=>{
     this.props.setId(this.props.station.id);
@@ -42,5 +42,7 @@ export const mapDispatchToProps = (dispatch)=>({
 export default connect(null, mapDispatchToProps)(Station);
 
 Station.propTypes = {
-  station: PropTypes.object
+  station: PropTypes.object,
+  setId: PropTypes.func,
+  setSelectedStation: PropTypes.func
 };

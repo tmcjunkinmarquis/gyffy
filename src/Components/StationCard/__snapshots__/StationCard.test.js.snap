@@ -1,0 +1,275 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StationCard Station should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Station
+    setId={[Function]}
+    setSelectedStation={[Function]}
+    station={
+        Object {
+            "address": "123 right here",
+            "connectorTypes": Array [
+              "",
+            ],
+            "fuelType": "ELEC",
+            "id": 3,
+            "name": "Bubbas",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <p
+          className="name"
+>
+          Bubbas
+</p>,
+        <p
+          className="address"
+>
+          123 right here
+</p>,
+        <p
+          className="fuel-type fuel-type"
+>
+          ELEC
+</p>,
+        <span>
+          <p>
+                    connectors: 
+          </p>
+          <span
+                    className="connector-type"
+          />
+</span>,
+      ],
+      "className": "fuel-station",
+      "onClick": [Function],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Bubbas",
+          "className": "name",
+        },
+        "ref": null,
+        "rendered": "Bubbas",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "123 right here",
+          "className": "address",
+        },
+        "ref": null,
+        "rendered": "123 right here",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "ELEC",
+          "className": "fuel-type fuel-type",
+        },
+        "ref": null,
+        "rendered": "ELEC",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <p>
+              connectors: 
+</p>,
+            Array [
+              <span
+                className="connector-type"
+/>,
+            ],
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "connectors: ",
+            },
+            "ref": null,
+            "rendered": "connectors: ",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": "",
+            "nodeType": "host",
+            "props": Object {
+              "children": "",
+              "className": "connector-type",
+            },
+            "ref": null,
+            "rendered": "",
+            "type": "span",
+          },
+        ],
+        "type": "span",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <p
+            className="name"
+>
+            Bubbas
+</p>,
+          <p
+            className="address"
+>
+            123 right here
+</p>,
+          <p
+            className="fuel-type fuel-type"
+>
+            ELEC
+</p>,
+          <span>
+            <p>
+                        connectors: 
+            </p>
+            <span
+                        className="connector-type"
+            />
+</span>,
+        ],
+        "className": "fuel-station",
+        "onClick": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Bubbas",
+            "className": "name",
+          },
+          "ref": null,
+          "rendered": "Bubbas",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "123 right here",
+            "className": "address",
+          },
+          "ref": null,
+          "rendered": "123 right here",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "ELEC",
+            "className": "fuel-type fuel-type",
+          },
+          "ref": null,
+          "rendered": "ELEC",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <p>
+                connectors: 
+</p>,
+              Array [
+                <span
+                  className="connector-type"
+/>,
+              ],
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "connectors: ",
+              },
+              "ref": null,
+              "rendered": "connectors: ",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": "",
+              "nodeType": "host",
+              "props": Object {
+                "children": "",
+                "className": "connector-type",
+              },
+              "ref": null,
+              "rendered": "",
+              "type": "span",
+            },
+          ],
+          "type": "span",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
