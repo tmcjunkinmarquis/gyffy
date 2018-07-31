@@ -9,15 +9,16 @@ describe('MapContainer Container', () => {
     let mockProps;
     beforeEach(()=>{
       mockProps = {
-        selectedStation: { name: 'bubbas', latitude: 38.802775, longitude: -103.9944365}
-      }
+        selectedStation: 
+          { name: 'bubbas', latitude: 38.802775, longitude: -103.9944365}
+      };
       wrapper = shallow(
-      <MapContainer
-      {...mockProps} />)
-    })
+        <MapContainer
+          {...mockProps} />);
+    });
 
     it('should match the snapshot', () => {
-      expect(wrapper).toMatchSnapshot()
+      expect(wrapper).toMatchSnapshot();
     });
   });
 
@@ -26,25 +27,26 @@ describe('MapContainer Container', () => {
     let mockProps;
     beforeEach(() => {
       mockProps = {
-        selectedStation: { name: 'bubbas', latitude: 38.802775, longitude: -103.9944365 }
-      }
+        selectedStation: 
+          { name: 'bubbas', latitude: 38.802775, longitude: -103.9944365 }
+      };
       wrapper = shallow(
         <MapContainer
-          {...mockProps} />)
-    })
+          {...mockProps} />);
+    });
 
     it('should return an object with keys selectedStation', () => {
       const mockState = {
-        selectedStation: { name: 'bubbas', latitude: 38.802775, longitude: -103.9944365 }
+        selectedStation: 
+          { name: 'bubbas', latitude: 38.802775, longitude: -103.9944365 }
       };
       const expected = {
-        selectedStation: { name: 'bubbas', latitude: 38.802775, longitude: -103.9944365 }
+        selectedStation: 
+          { name: 'bubbas', latitude: 38.802775, longitude: -103.9944365 }
       };
       const mappedProps = mapStateToProps(mockState);
 
       expect(mappedProps).toEqual(expected);
     });
   }); 
-
-  
 });
