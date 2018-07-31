@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MapContainer Container MapContainer Component should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <MapContainer
+    selectedStation={
+        Object {
+            "latitude": 38.802775,
+            "longitude": -103.9944365,
+            "name": "bubbas",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "center": Object {
+        "lat": 38.802775,
+        "lng": -103.9944365,
+      },
+      "centerAroundCurrentLocation": false,
+      "children": <Marker
+        name="bubbas"
+        position={
+                Object {
+                        "lat": 38.802775,
+                        "lng": -103.9944365,
+                      }
+        }
+/>,
+      "containerStyle": Object {},
+      "google": undefined,
+      "initialCenter": Object {
+        "lat": 38.902775,
+        "lng": -77.455649,
+      },
+      "style": Object {
+        "height": "50vh",
+        "margin": "auto",
+        "position": "relative",
+        "width": "90vw",
+      },
+      "visible": true,
+      "zoom": 15,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "name": "bubbas",
+        "position": Object {
+          "lat": 38.802775,
+          "lng": -103.9944365,
+        },
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "center": Object {
+          "lat": 38.802775,
+          "lng": -103.9944365,
+        },
+        "centerAroundCurrentLocation": false,
+        "children": <Marker
+          name="bubbas"
+          position={
+                    Object {
+                              "lat": 38.802775,
+                              "lng": -103.9944365,
+                            }
+          }
+/>,
+        "containerStyle": Object {},
+        "google": undefined,
+        "initialCenter": Object {
+          "lat": 38.902775,
+          "lng": -77.455649,
+        },
+        "style": Object {
+          "height": "50vh",
+          "margin": "auto",
+          "position": "relative",
+          "width": "90vw",
+        },
+        "visible": true,
+        "zoom": 15,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "name": "bubbas",
+          "position": Object {
+            "lat": 38.802775,
+            "lng": -103.9944365,
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
