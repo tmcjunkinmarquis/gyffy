@@ -1,6 +1,7 @@
 import React from 'react';
 import { LpgStationList, mapStateToProps, mapDispatchToProps } from './LpgStationList';
 import { shallow } from 'enzyme';
+import { setFilter } from '../../Actions/Actions';
 
 describe('LpgStationList Container', () => {
 
@@ -59,6 +60,34 @@ describe('LpgStationList Container', () => {
       const mappedProps = mapStateToProps(mockState);
 
       expect(mappedProps).toEqual(expected);
+    });
+  }); 
+
+  describe('mapDispatchToProps', () => {
+    let wrapper;
+    let mockProps;
+    const mockHandleFilterClick = jest.fn();
+
+    beforeEach(() => {
+      mockProps = {
+        stations: [{ name: 'bubbas' }],
+        location: '61615',
+        filter: 'SHOW_LPG'
+      };
+      wrapper = shallow(
+        <LpgStationList
+          handleFilterClick={mockHandleFilterClick}
+          {...mockProps}
+        />);
+    });
+
+    it('calls dispatch with a setFilter action when handleFilterClick is called', () => {
+      const mockDispatch = jest.fn();
+      const actionToDispatch = setFilter('SHOW_LPG');
+      const mappedProps = mapDispatchToProps(mockDispatch);
+      mappedProps.handleFilterClick('SHOW_LPG');
+
+      expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
     });
   }); 
   
