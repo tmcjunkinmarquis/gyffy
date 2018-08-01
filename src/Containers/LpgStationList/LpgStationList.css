@@ -15,7 +15,7 @@
 
 .fuel-stations-header {
   margin-left: 20px;
-  color: black;
+  color: darkslateblue;
   text-shadow: none;
 }
 
@@ -24,6 +24,10 @@ span {
   white-space: pre;
 }
 
+.name {
+  color: darkslateblue;
+}
+
 .filter-type {
-  color: orange;
+  color: hotpink;
 }

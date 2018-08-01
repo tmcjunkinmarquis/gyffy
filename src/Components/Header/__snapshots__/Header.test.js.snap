@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App should match the snapshot 1`] = `
+exports[`Header should match the snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <App />,
+  Symbol(enzyme.__unrendered__): <Header />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -18,41 +18,42 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Header
-          className="App-header"
+        <h1
+          className="gyffy-logo"
+>
+          gyffy
+</h1>,
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/"
 />,
-        <withRouter(Connect(Component)) />,
-        <withRouter(Connect(Component)) />,
       ],
-      "className": "App",
+      "className": "app-header",
     },
     "ref": null,
     "rendered": Array [
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "function",
+        "nodeType": "host",
         "props": Object {
-          "className": "App-header",
+          "children": "gyffy",
+          "className": "gyffy-logo",
         },
         "ref": null,
-        "rendered": null,
-        "type": [Function],
+        "rendered": "gyffy",
+        "type": "h1",
       },
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "function",
-        "props": Object {},
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {},
+        "nodeType": "class",
+        "props": Object {
+          "component": [Function],
+          "exact": true,
+          "path": "/",
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -67,41 +68,42 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Header
-            className="App-header"
+          <h1
+            className="gyffy-logo"
+>
+            gyffy
+</h1>,
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/"
 />,
-          <withRouter(Connect(Component)) />,
-          <withRouter(Connect(Component)) />,
         ],
-        "className": "App",
+        "className": "app-header",
       },
       "ref": null,
       "rendered": Array [
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
+          "nodeType": "host",
           "props": Object {
-            "className": "App-header",
+            "children": "gyffy",
+            "className": "gyffy-logo",
           },
           "ref": null,
-          "rendered": null,
-          "type": [Function],
+          "rendered": "gyffy",
+          "type": "h1",
         },
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
-          "props": Object {},
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {},
+          "nodeType": "class",
+          "props": Object {
+            "component": [Function],
+            "exact": true,
+            "path": "/",
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],

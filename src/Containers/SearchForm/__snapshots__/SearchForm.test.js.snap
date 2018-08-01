@@ -5,7 +5,11 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SearchForm
+    action=""
+    className="search-form"
     handleSubmit={[Function]}
+    loadStoreWithStations={[Function]}
+    location="61615"
     onSubmit={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -24,7 +28,7 @@ ShallowWrapper {
       "children": Array [
         <input
           onChange={[Function]}
-          placeholder="Type location"
+          placeholder="Type zipcode"
           type="text"
           value=""
 />,
@@ -43,7 +47,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "onChange": [Function],
-          "placeholder": "Type location",
+          "placeholder": "Type zipcode",
           "type": "text",
           "value": "",
         },
@@ -75,7 +79,7 @@ ShallowWrapper {
         "children": Array [
           <input
             onChange={[Function]}
-            placeholder="Type location"
+            placeholder="Type zipcode"
             type="text"
             value=""
 />,
@@ -94,7 +98,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "onChange": [Function],
-            "placeholder": "Type location",
+            "placeholder": "Type zipcode",
             "type": "text",
             "value": "",
           },

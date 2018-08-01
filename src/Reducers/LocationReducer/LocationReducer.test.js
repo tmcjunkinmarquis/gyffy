@@ -1,5 +1,4 @@
 import locationReducer from './LocationReducer';
-import * as actions from '../../Actions/Actions';
 
 describe('locationReducer', ()=>{
 

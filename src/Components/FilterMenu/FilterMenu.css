@@ -1,6 +1,6 @@
 .filter-menu {
   display: grid;
-  grid-template-columns: 65% 35%;
+  grid-template-columns: 33% 33% 33% ;
   grid-template-rows: 50% 50%;
 }
 
@@ -11,5 +11,5 @@
   background-color: #E8EEF1;
   padding: 20px 10px 20px 30px;
   text-shadow: none;
-  text-decoration: none;
+  /* text-decoration: none; */
 }

@@ -29,18 +29,17 @@ export class MapContainer extends Component {
     }});
     const lat = this.props.selectedStation.latitude;
     const lng = this.props.selectedStation.longitude;
-    // this.props.setCenter({
-    //   lat,
-    //   lng 
-    // });
   }
   
   render() {
     const style = {
-      margin: 'auto',
-      width: '90vw',
-      height: '50vh',
+      'margin-top': '-80px',
+      width: '100vw',
+      height: '65vh',
       position: 'relative'
+    };
+    const detailsStyle = {
+      margin: '30px'
     };
     const initialCenter = {
       lat: 38.902775,
@@ -56,11 +55,15 @@ export class MapContainer extends Component {
         google={this.props.google}
         style={style}
         initialCenter={initialCenter}
-        center = {center}
+        center={center}
         zoom={15}
       >
-        {this.selectedStationMarker()}   
-      </Map>
+        {this.selectedStationMarker()}
+        <div style={detailsStyle}>
+          <h3>{this.props.selectedStation.name}</h3>
+          <h4>{this.props.selectedStation.phone}</h4>
+        </div>
+      </Map>  
     );
   }
 }

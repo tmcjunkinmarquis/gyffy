@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import './ElectricStationList.css';
+import './ElectricStationsList.css';
 import StationCard from '../../Components/StationCard/StationCard';
 import PropTypes from 'prop-types';
 import { setFilter } from '../../Actions/Actions';
 import { Link } from 'react-router-dom';
-import DetailsCard from '../DetailsCard/DetailsCard';
 
-class ElectricStationList extends Component {
+export class ElectricStationList extends Component {
   
   componentDidMount(){ 
     this.props.handleFilterClick('SHOW_ELEC');
@@ -37,7 +36,7 @@ class ElectricStationList extends Component {
     return (
       <div className="wrapper">
         <h3 className="fuel-stations-header">
-          <span className="filter-type">{this.fillTheSpan()}</span>
+          <span className="filter-t">{this.fillTheSpan()}</span>
           STATIONS
           <span >   -   {this.props.location}</span>
         </h3>
