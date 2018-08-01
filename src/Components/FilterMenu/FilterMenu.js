@@ -5,10 +5,9 @@ import { Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 export const FilterMenu = (props)=>{
-
   const provideLinks = ()=>{
     return <div className="filter-menu">
-      <Link to="/" className="nav">NEW ZIPCODE</Link>
+      
       <Link to="/all" className="nav">All</Link>
       <Link to="/electric" className="nav">Electric</Link>
       <Link to="/lpg" className="nav">LPG</Link> 

@@ -13,6 +13,12 @@
   justify-content: center;
 }
 
+.fuel-stations-header {
+  margin-left: 20px;
+  color: darkslateblue;
+  text-shadow: none;
+}
+
 span {
   color: darkslateblue;
   white-space: pre;
@@ -22,6 +28,10 @@ span {
   color: darkslateblue;
 }
 
-.filter{
- color: chartreuse;
+.fuel-type {
+  color: orange;
+}
+
+.filter-t {
+  color: orange;
 }

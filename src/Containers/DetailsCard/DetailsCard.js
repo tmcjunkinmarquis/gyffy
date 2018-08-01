@@ -7,7 +7,9 @@ class DetailsCard extends Component {
   render() {
     return (
       <div className="details-card">
-        <MapContainer />
+        
+        <MapContainer className="Map-Container"/>
+        
       </div>
     );
   }
