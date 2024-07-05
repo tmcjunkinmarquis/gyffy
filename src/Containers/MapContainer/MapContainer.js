@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
-import { aGoogleKey } from '../../apiKey';
-import { Map, Marker, GoogleApiWrapper } from 'google-maps-react';
+import { apiKey } from '../../apiKey.json';
+import { Map,
+  Marker,
+  AdvancedMarkerElement,
+  GoogleApiWrapper } from 'google-maps-react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 // import { setCenter } from '../../Actions/Actions';
@@ -76,8 +79,9 @@ export const mapDispatchToProps = (dispatch) =>({
   /* setCenter: (center) => dispatch(setCenter(center)) */
 });
 
+console.log("apiKey:", apiKey)
 const googleWrapper = GoogleApiWrapper({
-  apiKey: aGoogleKey
+  apiKey: apiKey["apiKey"]
 })(MapContainer);
 
 export default connect(mapStateToProps, mapDispatchToProps)(googleWrapper);

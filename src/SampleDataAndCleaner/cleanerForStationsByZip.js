@@ -1,4 +1,5 @@
 export const cleanerForStationsByZip = (stations) => {
+  // console.log("stations: ", stations)
   return stations.fuel_stations.reduce((acc, station) => {
     const newStation = {
       id: station.id,

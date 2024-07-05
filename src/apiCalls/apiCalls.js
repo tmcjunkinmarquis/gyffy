@@ -1,4 +1,4 @@
-import { apiKey } from '../apiKey';
+import { apiKey } from '../apiKey.json';
 
 export const locationFetch = async (location)=>{
   const zipcode = location;
